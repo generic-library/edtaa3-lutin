@@ -7,16 +7,16 @@ def get_desc():
 
 def create(target):
 	# module name is 'edn' and type binary.
-	myModule = module.Module(__file__, 'edtaa3', 'LIBRARY')
+	my_module = module.Module(__file__, 'edtaa3', 'LIBRARY')
 	# add the file to compile:
-	myModule.add_src_file([
+	my_module.add_src_file([
 		'edtaa3/edtaa3func.c'
 		])
-	myModule.add_header_file([
+	my_module.add_header_file([
 		'edtaa3/edtaa3func.h'
 		])
-	myModule.compile_version_CC(1999)
-	myModule.add_path(tools.get_current_path(__file__))
-	return myModule
+	my_module.compile_version_CC(1999)
+	my_module.add_path(tools.get_current_path(__file__))
+	return my_module
 
 
