@@ -21,12 +21,16 @@ def get_version():
 def create(target, module_name):
 	my_module = module.Module(__file__, module_name, get_type())
 	my_module.add_src_file([
-		'edtaa3/edtaa3func.c'
-		])
+	    'edtaa3/edtaa3func.c'
+	    ])
 	my_module.add_header_file([
-		'edtaa3/edtaa3func.h'
-		])
+	    'edtaa3/edtaa3func.h'
+	    ])
 	my_module.compile_version("C", 1999)
+	my_module.add_module_depend([
+	    'c',
+	    'm'
+	    ])
 	my_module.add_path(tools.get_current_path(__file__))
 	return my_module
 
