@@ -27,7 +27,7 @@ def create(target, module_name):
 	    'edtaa3/edtaa3func.h'
 	    ])
 	my_module.compile_version("C", 1999)
-	my_module.add_module_depend([
+	my_module.add_depend([
 	    'c',
 	    'm'
 	    ])
