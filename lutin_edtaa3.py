@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import lutin.module as module
+import lutin.debug as debug
 import lutin.tools as tools
 
 
@@ -18,8 +18,7 @@ def get_maintainer():
 def get_version():
 	return [0,5]
 
-def create(target, module_name):
-	my_module = module.Module(__file__, module_name, get_type())
+def configure(target, my_module):
 	my_module.add_src_file([
 	    'edtaa3/edtaa3func.c'
 	    ])
@@ -31,7 +30,6 @@ def create(target, module_name):
 	    'c',
 	    'm'
 	    ])
-	my_module.add_path(tools.get_current_path(__file__))
-	return my_module
+	return True
 
 
